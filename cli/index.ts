@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { detectORM } from "../core/orm-detector";
+import { getAdapter } from "../core/adapter-factory";
 
 const program = new Command();
 

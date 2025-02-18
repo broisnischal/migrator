@@ -9,3 +9,5 @@ export type MigrationStatus = {
   pending: string[];
   applied: string[];
 };
+
+export type ORMType = "prisma" | "drizzle"; // "sequelize"
