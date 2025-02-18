@@ -1,5 +1,7 @@
 # supermigration
 
+One Cli & Docs for multiple orm -> migrations!
+
 migrate generate <name> # Create new migration
 migrate apply # Run pending migrations
 migrate rollback # Revert last migration
