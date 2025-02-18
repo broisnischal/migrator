@@ -1,0 +1,5 @@
+{
+  "orm": "prisma",
+  "migrationDir": "custom/migrations",
+  "dbConnection": "$DATABASE_URL"
+}
