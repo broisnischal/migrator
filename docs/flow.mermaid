@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant Developer
+    participant CLI
+    participant ORM Adapter
+    participant Database
+
+    Developer->>CLI: migrate generate "add_users_table"
+    CLI->>ORM Adapter: generateMigration(name)
+    ORM Adapter->>Database: Introspect schema
+    ORM Adapter-->>CLI: Create migration file (UP/DOWN)
+    CLI->>Developer: Migration created at migrations/202310101200_add_users_table.sql
+
+    Developer->>CLI: migrate apply
+    CLI->>ORM Adapter: applyMigrations()
+    ORM Adapter->>Database: Check migrations table
+    ORM Adapter->>Database: Execute unapplied UP migrations
+    ORM Adapter->>Database: Update migrations table
+    Database-->>CLI: Success
+
+    Developer->>CLI: migrate rollback
+    CLI->>ORM Adapter: revertMigration()
+    ORM Adapter->>Database: Find last applied migration
+    ORM Adapter->>Database: Execute DOWN operation
+    ORM Adapter->>Database: Remove from migrations table
+    Database-->>CLI: Success

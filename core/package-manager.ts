@@ -34,9 +34,9 @@ export function getCMD(packageManager: PackageManager): string {
     case "pnpm":
       return "pnpm";
     case "npm":
-      return "npm";
+      return "npx";
     case "bun":
-      return "bun";
+      return "bunx";
     default:
       throw new Error(`Unknown package manager: ${packageManager}`); // TODO::Handle-Error-Later
   }
