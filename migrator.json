@@ -1,0 +1,15 @@
+{
+  "dbConnection": {
+    "database": "asdf",
+    "host": "localhost",
+    "password": "asdf",
+    "port": 5432,
+    "user": "asdf"
+  },
+  "migrationDir": "./migration",
+  "orm": "auto",
+  "overrides": {
+    "drizzle": {}
+  },
+  "verbose": true
+}

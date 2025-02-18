@@ -11,3 +11,5 @@ export type MigrationStatus = {
 };
 
 export type ORMType = "prisma" | "drizzle"; // "sequelize"
+
+type PackageManager = "npm" | "yarn" | "pnpm" | "bun" | "unknown";

@@ -26,3 +26,7 @@ migrate apply
 ```
 npx migrator init
 ```
+
+research: https://github.com/lukaszbudnik/migrator
+research: https://www.sea-ql.org/sea-orm-tutorial/ch01-02-migration-cli.html
+research: migration basics, and migrations for multiple environment
