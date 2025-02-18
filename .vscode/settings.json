@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["migrator.json"],
+      "url": "./migrator.schema.json"
+    }
+  ]
+}
